@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Logitank Labs</title>
+    <link href="/static/images/favicon.png" rel="icon" type="image/png">
+    <link href="/static/css/base.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+  <body>
+    <div class="flex container text-center">
+      <section class="header flex-content">
+        {{ content }}
+      </section>
+      <footer class="footer text text-sm">
+        <div class="text-heavy">
+          <a href="https://github.com/abtrout">abtrout</a>
+        </div>
+        <div>
+          <span class="text-light years-nav">
+            <a href="/2014" {% if page.year == 2014 %}class="text-heavy"{% endif %}>2014</a>/<a href="/2016" {% if page.year == 2016 %}class="text-heavy"{% endif %}>2016</a>/<a href="/2020" {% if page.year == 2020 %}class="text-heavy"{% endif %}>2020</a>
+          </span>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript">
+      document._EUGO = '692d5ab11672ac0d0330';
+      document.head.appendChild(function() {
+        var s = document.createElement('script');
+        s.src = 'https://eugo.io/eugo.js';
+        s.async = 1;
+        return s;
+      }());
+    </script>
+  </body>
+</html>

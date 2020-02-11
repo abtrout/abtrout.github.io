@@ -1,0 +1,22 @@
+.relative { position: relative; }
+
+#cursor {
+  display: block;
+  position: absolute;
+  left: 65%; top: 30%;
+  width: 1.666%; height: 3.25%;
+  background-color: #231f20;
+  border-radius: 1px;
+}
+
+.blinking {
+  -webkit-animation: blink 1200ms steps(1) infinite;
+  -moz-animation: blink 1200ms steps(1) infinite;
+  -ms-animation: blink 1200ms steps(1) infinite;
+  animation: blink 1200ms steps(1) infinite;
+}
+
+@-webkit-keyframes blink { 50% { visibility: hidden; }}
+@-moz-keyframes blink { 50% { visibility: hidden; }}
+@-ms-keyframes blink { 50% { visibility: hidden; }}
+@keyframes blink { 50% { visibility: hidden; }}

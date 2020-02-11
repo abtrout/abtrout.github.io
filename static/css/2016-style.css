@@ -1,0 +1,110 @@
+.logo,
+.label {
+  width: 100%;
+  background: url("/static/images/2016-sprites.svg");
+  background-size: 300%;
+}
+
+.logo  { padding-bottom: 100%; }
+.label { padding-bottom: 40%; }
+
+.logi .logo { background-position:  0% 50%; }
+.tank .logo { background-position: 50% 50%; }
+.labs .logo { background-position: 100% 50%; }
+
+.logi .label { background-position: 0%   0; }
+.tank .label { background-position: 50%  0; }
+.labs .label { background-position: 100% 0; }
+
+/*
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 5% auto 10% auto;
+  overflow: hidden;
+}
+*/
+
+.logi .label { opacity: 0.50; }
+.tank .label { opacity: 0.80; }
+
+.logo {
+  display: none;
+}
+
+@media screen and (min-width: 496px) {
+  .logo {
+    display: block;
+  }
+
+  .labs .logo {
+    -webkit-animation: bubble 450ms steps(1) infinite;
+    -moz-animation: bubble 450ms steps(1) infinite;
+    -o-animation: bubble 450ms steps(1) infinite;
+    animation: bubble 450ms steps(1) infinite;
+  }
+
+  .logi .label,
+  .tank .label {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 496px) and (max-width: 799px) {
+  .logo,
+  .label {
+    float: left;
+  }
+
+  .logo {
+    display: block;
+    width: 24%; 
+    padding-bottom: 24%;
+    position: relative;
+    right: -8%;
+    margin-left: 8%;
+  }
+
+  .label {
+    display: block;
+    width: 60%;
+    padding-bottom: 24%;
+    position: relative;
+    top: 1em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .logi,
+  .tank,
+  .labs {
+    float: left;
+    width: 33.3333%;
+  }
+}
+
+/* keyframes for bubbling animation: */
+@-webkit-keyframes bubble {
+   0% { background-position: 100%  50%; }
+  25% { background-position:   0% 100%; } 
+  50% { background-position:  50% 100%; }
+  75% { background-position: 100% 100%; }
+}
+@-moz-keyframes bubble {
+   0% { background-position: 100%  50%; }
+  25% { background-position:   0% 100%; } 
+  50% { background-position:  50% 100%; }
+  75% { background-position: 100% 100%; }
+}
+@-o-keyframes bubble {
+   0% { background-position: 100%  50%; }
+  25% { background-position:   0% 100%; } 
+  50% { background-position:  50% 100%; }
+  75% { background-position: 100% 100%; }
+}
+@keyframes bubble {
+   0% { background-position: 100%  50%; }
+  25% { background-position:   0% 100%; } 
+  50% { background-position:  50% 100%; }
+  75% { background-position: 100% 100%; }
+}
