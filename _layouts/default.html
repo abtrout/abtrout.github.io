@@ -12,15 +12,14 @@
       <section class="header flex-content">
         {{ content }}
       </section>
-      <footer class="footer text text-sm">
-        <div class="text-heavy">
-          <a href="https://github.com/abtrout">abtrout</a>
-        </div>
-        <div>
-          <span class="text-light years-nav">
-            <a href="/2014" {% if page.year == 2014 %}class="text-heavy"{% endif %}>2014</a>/<a href="/2016" {% if page.year == 2016 %}class="text-heavy"{% endif %}>2016</a>/<a href="/2020" {% if page.year == 2020 %}class="text-heavy"{% endif %}>2020</a>
-          </span>
-        </div>
+      <footer class="footer text-sm">
+        <span class="text text-heavy text-underline">
+          <a href="https://github.com/abtrout">abtrout,</a>
+        </span>
+        <span class="text-mono text-light">
+          {% assign posts = site.posts | reverse %}
+          {% for p in posts %}<a href="{{ p.url }}" {% if p.year == page.year %}class="text-heavy"{% endif %}>{{ p.year }}</a>{% unless forloop.last %}/{% endunless %}{% endfor %}
+        </span>
       </footer>
     </div>
     <script type="text/javascript">

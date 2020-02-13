@@ -4,13 +4,16 @@
 }
 
 body {
-  background-color: #E7C600;
+  background-color: #e7c600;
+  font-family: sans-serif;
 }
 
-a, a:HOVER,
-body {
-  color: #231f20;
-}
+a,
+a:HOVER,
+body { color: #231f20; }
+
+a { text-decoration: none; }
+a:HOVER { text-decoration: underline; }
 
 .container {
   width: 90%;
@@ -18,14 +21,18 @@ body {
   margin: 0 auto;
 }
 
-.header { margin-top: 100px; }
+.header { margin-top: 15%; }
 
 .footer {
-  margin-top: 200px;
-  margin-bottom: 60px;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
-.text { font-family: sans-serif }
+.footer span {
+  margin: auto 3px;
+}
+
+.text-mono { font-family: monospace; }
 .text-center { text-align: center; }
 
 .text-md { font-size: 1.75em; }
@@ -44,13 +51,3 @@ body {
 }
 
 .flex-content { flex: 1; }
-
-.years-nav {
-  font-family: monospace;
-}
-.years-nav > a {
-  text-decoration: none;
-}
-.years-nav > a:HOVER {
-  text-decoration: underline;
-}
