@@ -6,7 +6,7 @@ year: 2014
 
 <link rel="stylesheet" type="text/css" href="/static/css/2014-style.css">
 
-<div id="tank" class="unplugged"></div>
+<div id="tank" class="plugged"></div>
 <script type="text/javascript">
   var t = document.getElementById("tank"),
       LOGITANK = function() {
@@ -15,5 +15,6 @@ year: 2014
         clearTimeout(s);
       },
       s = setTimeout(LOGITANK, 1337);
+  t.className = "unplugged";
   t.onclick = LOGITANK;
 </script>
